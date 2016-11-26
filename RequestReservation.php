@@ -34,7 +34,7 @@
 
 
 
-    $con = mysqli_connect("mysql6.000webhost.com", "a4706684_hili", "123hili@", "a4706684_p3Adb");
+    $con = mysqli_connect();
  
 	$resto = $_POST["resto"];
     $client = $_POST["client"];
@@ -61,7 +61,7 @@
     echo json_encode($response);
 	
 /////////////////////////////////////	
-	$con = mysqli_connect("mysql6.000webhost.com", "a4706684_hili", "123hili@", "a4706684_p3Adb") or die("Error connecting");
+	$con = mysqli_connect() or die("Error connecting");
 
         //$restaurant_name=$_POST["resto"]
 

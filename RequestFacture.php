@@ -31,7 +31,7 @@
 
 
 
-	$con = mysqli_connect("mysql6.000webhost.com", "a4706684_hili", "123hili@", "a4706684_p3Adb") or die("Error connecting");
+	$con = mysqli_connect() or die("Error connecting");
 
         $clientID = $_POST["clientID"];
 		$price = $_POST["total"];
