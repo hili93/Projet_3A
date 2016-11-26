@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "100064003686",
+    "firebase_url": "https://projet3a-9b44d.firebaseio.com",
+    "project_id": "projet3a-9b44d",
+    "storage_bucket": "projet3a-9b44d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100064003686:android:3c94aa1e520fc545",
+        "android_client_info": {
+          "package_name": "com.example.hicham.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "100064003686-ka2dududoqnscr768b0lobfnpjr5c12b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXMtBPkcf4Jf9AJcQvwhqCHKWgZGUdUrA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

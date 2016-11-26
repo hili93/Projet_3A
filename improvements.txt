@@ -1,0 +1,5 @@
+
+change profile to buttons
+
+Icone Bill sent when bill is already sent (for restaurant).
+Dont let restaurant in reservationProfile when he sends the bill.

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hicham.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/gemalto_icon"
+        android:label="Smart resto'"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Register.RegisterActivity" />
+        <activity android:name=".Loging.LoginActivity" />
+        <activity android:name=".UserMoreInfos" />
+        <activity android:name=".ClientActions.AreaActivityClient" />
+        <activity android:name=".RestaurantActions.AreaActivityRestaurant" />
+        <activity android:name=".ClientActions.ResultSearchActivity" />
+
+        <service android:name=".Firebase.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Firebase.FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".RestaurantActions.ProfileRestaurant" />
+        <activity android:name=".RestaurantActions.ActivityRestaurantHistoryReservations" />
+        <activity android:name=".RestaurantActions.ReservationRestaurantProfile" />
+        <activity android:name=".ClientActions.ActivityClientHistoryReservations" />
+        <activity android:name=".ClientActions.ReservationClientProfile"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_restaurant_area"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="30dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_smart_resto"
+    android:padding="10dp"
+
+    tools:context="com.example.hicham.myapplication.RestaurantActions.AreaActivityRestaurant">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:paddingBottom="30dp"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvWelcomeMsg"
+                android:textColor="@color/white"
+                android:layout_marginTop="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/white"
+                android:text=""
+                android:ems="10"
+                android:id="@+id/etName"
+                android:layout_below="@+id/tvName"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:id="@+id/tvEmail"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:backgroundTint="@color/white"
+                android:text=""
+                android:ems="10"
+                android:id="@+id/etEmail"
+                android:textColor="@color/white"
+                android:layout_below="@+id/tvEmail"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:text="Type client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTypeClient"
+                android:textColor="@color/white"
+                android:layout_below="@+id/etEmail"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentEnd="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/white"
+                android:text=""
+                android:ems="10"
+                android:layout_below="@+id/tvTypeClient"
+                android:layout_alignParentStart="true"
+                android:id="@+id/etTypeClient"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:text="City"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:id="@+id/tvCity"
+                android:layout_below="@+id/etTypeClient"
+                android:layout_marginTop="18dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text=""
+                android:ems="10"
+                android:id="@+id/etCity"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/white"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvCity" />
+
+            <Button
+                android:text="Complete infos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bAddInfos" />
+
+            <Button
+                android:text="Show reservations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bShowClientReservations"
+                android:onClick="bShowHistoryReservations"/>
+            <Button
+                android:text="Logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bLogout"
+                android:onClick="bLogoutClicked" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
