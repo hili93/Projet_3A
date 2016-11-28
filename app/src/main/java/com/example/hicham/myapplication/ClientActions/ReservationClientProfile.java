@@ -3,6 +3,7 @@ package com.example.hicham.myapplication.ClientActions;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.hicham.myapplication.R;
@@ -29,8 +30,10 @@ public class ReservationClientProfile extends AppCompatActivity {
         TextView tvTotalPrice = (TextView)findViewById(R.id.tvTotalPrice);
         TextView tvDate = (TextView)findViewById(R.id.tvDate);
         TextView tvTime = (TextView)findViewById(R.id.tvTime);
+        RatingBar ratingBar =(RatingBar)findViewById(R.id.ratingBar);
 
-
+        ratingBar.setNumStars(5);
+        ratingBar.setMax(5);
         tvReservationID.setText(reservationID);
         tvRestoName.setText(restoName);
         tvTotalPrice.setText(price);

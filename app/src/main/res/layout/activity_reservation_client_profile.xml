@@ -128,4 +128,12 @@
         android:layout_height="wrap_content"
         android:text="Pay" />
 
+    <RatingBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:secondaryProgressTint="@color/white"
+        android:backgroundTint="@color/white"
+        android:stepSize="1.0"/>
+
 </LinearLayout>

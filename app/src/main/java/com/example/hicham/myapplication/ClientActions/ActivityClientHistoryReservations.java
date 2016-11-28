@@ -70,13 +70,15 @@ public class ActivityClientHistoryReservations extends AppCompatActivity {
             Button bReservationID = new Button(this);
             Button bRestoName = new Button(this);
             Button bStatus = new Button(this);
+            Button bNotifyArrival = new Button(this);
 
             bReservationID.setText(reservationID);
             bRestoName.setText(restoName);
+            bNotifyArrival.setBackgroundResource(R.drawable.icon_notify);
 
-            bReservationID.setWidth(5);
-            bRestoName.setWidth(240);
-            bStatus.setWidth(50);
+            bReservationID.setWidth(1);
+            bRestoName.setWidth(210);
+            bStatus.setWidth(30);
 
             if (currStatus.equals("1"))
                 bStatus.setBackgroundResource(R.drawable.unpayed_icon);
@@ -116,9 +118,12 @@ public class ActivityClientHistoryReservations extends AppCompatActivity {
 
 
             });
+
+
             tempLayout2.addView(bReservationID);
             tempLayout2.addView(bRestoName);
             tempLayout2.addView(bStatus);
+            tempLayout2.addView(bNotifyArrival);
 
             ll.addView(tempLayout2, lp);
 

@@ -37,7 +37,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ProfileRestaurant extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
-
+    boolean reserved = false;
     public static String nameResto = null;
     public static String nameClient = null;
     Button b_pick;
@@ -91,12 +91,16 @@ public class ProfileRestaurant extends AppCompatActivity implements DatePickerDi
                                 System.out.println("RESERVATION INFOS");
                                 System.out.println("==>resto name: " + nameResto + "\n==>client name: " + nameClient);
 
-                                Button bSelectMenu = new Button(ProfileRestaurant.this);
-                                bSelectMenu.setText("Select your menu");
 
-                                LinearLayout ll = (LinearLayout) findViewById(R.id.activity_profile_restaurant);
-                                ActionBar.LayoutParams lp = new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
-                                ll.addView(bSelectMenu, lp);
+                                if (!reserved) {
+                                    reserved = true;
+                                    Button bSelectMenu = new Button(ProfileRestaurant.this);
+                                    bSelectMenu.setText("Select your menu");
+
+                                    LinearLayout ll = (LinearLayout) findViewById(R.id.activity_profile_restaurant);
+                                    ActionBar.LayoutParams lp = new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                                    ll.addView(bSelectMenu, lp);
+                                }
                             }
                         } catch (JSONException e) {
                             Toast toast = Toast.makeText(getApplicationContext(), "ERROR reservation !", Toast.LENGTH_SHORT);
@@ -106,7 +110,7 @@ public class ProfileRestaurant extends AppCompatActivity implements DatePickerDi
                     }
                 };
 
-                RequestReservation reservationRequest = new RequestReservation(nameResto, nameClient,yearFinal+"-"+monthFinal+"-"+dayFinal,hourFinal+":"+minuteFinal, responseListener);
+                RequestReservation reservationRequest = new RequestReservation(nameResto, nameClient, yearFinal + "-" + monthFinal + "-" + dayFinal, hourFinal + ":" + minuteFinal, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(ProfileRestaurant.this);
                 queue.add(reservationRequest);
 

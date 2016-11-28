@@ -36,7 +36,6 @@ public class FirebaseInstanceIDService extends FirebaseInstanceIdService {
         editor.putString("Token", token);
         editor.commit();
         System.out.println("TOKEN STORED IN SHARED PREF");
-
     }
 
 }
